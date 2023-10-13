@@ -10,29 +10,29 @@ const Products = () => {
   const vectorImage1 = {
     backgroundImage: `url(${product1_vector})`,
     backgroundSize: 'cover',
-    width: '770px',
-    height: '900px',
+    width: '85vh',
+    height: '100vh',
     position: 'absolute',
     left: '0',
-    top: '100px',
+    top: '10vh',
   };
   const vectorImage2 = {
     backgroundImage: `url(${product2_vector})`,
     backgroundSize: 'cover',
-    width: '300px',
-    height: '900px',
+    width: '40vh',
+    height: '120vh',
     position: 'absolute',
     right: '0',
-    top: '900px',
+    top: '110vh',
   };
   const vectorImage3 = {
     backgroundImage: `url(${product3_vector})`,
     backgroundSize: 'cover',
-    width: '800px',
-    height: '400px',
+    width: '98vh',
+    height: '50vh',
     position: 'absolute',
-    left: '100px',
-    top: '2000px',
+    left: '0',
+    top: '220vh',
   };
 
   return (
@@ -83,7 +83,7 @@ const Products = () => {
       </div>
 
       {/* Large screens */}
-      <div className="hidden lg:block h-screen">
+      <div className="hidden flex lg:block h-screen">
         <div className="absolute" style={vectorImage1}></div>
         <div className="relative top-[120px] left-20 xl:left-28 w-96 text-left">
           <p className="text-8xl mb-4 py-4">Product no. 1</p>
@@ -91,7 +91,7 @@ const Products = () => {
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product1} alt="product1" className="absolute w-1/3 right-0 xl:right-40 top-24" />
+          <img src={product1} alt="product1" className="relative bottom-[400px] left-[300px] xl:left-[400px] 2xl:left-[500px] w-1/3" />
         </div>
       </div>
 
@@ -103,19 +103,19 @@ const Products = () => {
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product2} alt="product2" className="absolute w-1/3 right-10 xl:right-40 top-[1000px]" />
+        <img src={product2} alt="product2" className="relative bottom-[400px] left-[300px] xl:left-[400px] 2xl:left-[500px] w-1/3" />
         </div>
       </div>
 
       <div className="hidden lg:block h-screen">
         <div className="absolute" style={vectorImage3}></div>
-        <div className="relative top-[100px] left-[600px] xl:left-[1000px] w-96 2xl:w-2/5 text-left">
+        <div className="relative top-[100px] left-[500px] lg:left-[600px] xl:left-[750px] 2xl:left-[900px] w-96 2xl:w-2/5 text-left">
           <p className="text-8xl mb-4 py-4">Product no. 3</p>
           <p className="text-3xl mb-4 py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product3} alt="product2" className="absolute w-1/3 left-10 xl:left-40 top-[1900px]" />
+        <img src={product3} alt="product3" className="relative bottom-[400px] -left-[200px] xl:-left-[300px] 2xl:-left-[500px] w-1/3" />
         </div>
       </div>
     </div>
