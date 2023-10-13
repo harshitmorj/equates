@@ -91,7 +91,7 @@ const Products = () => {
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product1} alt="product1" className="absolute right-0 xl:right-24 top-44" />
+          <img src={product1} alt="product1" className="absolute w-1/3 right-0 xl:right-40 top-24" />
         </div>
       </div>
 
@@ -103,7 +103,7 @@ const Products = () => {
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product2} alt="product2" className="absolute right-10 xl:right-40 top-[1000px]" />
+          <img src={product2} alt="product2" className="absolute w-1/3 right-10 xl:right-40 top-[1000px]" />
         </div>
       </div>
 
@@ -115,7 +115,7 @@ const Products = () => {
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product3} alt="product3" className="absolute w-2/5 left-8 xl:left-24 top-[1950px]" />
+          <img src={product3} alt="product3" className="absolute w-1/3 left-8 xl:left-24 top-[1900px]" />
         </div>
       </div>
     </div>
