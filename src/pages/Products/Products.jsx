@@ -109,13 +109,13 @@ const Products = () => {
 
       <div className="hidden lg:block h-screen">
         <div className="absolute" style={vectorImage3}></div>
-        <div className="absolute top-[2100px] right-[100px] w-96 2xl:w-2/5 text-left">
+        <div className="relative top-[100px] left-[600px] xl:left-[1000px] w-96 2xl:w-2/5 text-left">
           <p className="text-8xl mb-4 py-4">Product no. 3</p>
           <p className="text-3xl mb-4 py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product3} alt="product3" className="absolute w-1/3 left-8 xl:left-24 top-[1900px]" />
+          <img src={product3} alt="product2" className="absolute w-1/3 left-10 xl:left-40 top-[1900px]" />
         </div>
       </div>
     </div>
