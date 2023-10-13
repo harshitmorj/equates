@@ -91,7 +91,7 @@ const Products = () => {
           <button className="bg-purple-500 text-black px-8 py-4">Product Details</button>
         </div>
         <div className="flex flex-row justify-center">
-          <img src={product1} alt="product1" className="absolute -right-10 xl:right-24 top-44" />
+          <img src={product1} alt="product1" className="absolute right-0 xl:right-24 top-44" />
         </div>
       </div>
 

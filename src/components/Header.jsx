@@ -122,7 +122,7 @@ const Header = ({ activeTab, toggle }) => {
                     </NavLink>
                     <NavLink
                         to="/contact"
-                        className={` p-3 hover:bg-blue-500   hover:scale-110 transition duration-500 ${activeTab === 'contact' ? 'bg-gray-200 text-purple-700 hover:text-white text-purple-700' : 'bg-purple-700 hover:text-white text-white'}`}
+                        className={` p-3 hover:bg-blue-500 hover:scale-110 transition duration-500 ${activeTab === 'contact' ? 'bg-gray-200 text-purple-700 hover:text-purple-700' : 'bg-purple-700 hover:text-white text-white'}`}
                         onClick={() => toggle('contact')}
                     >
                         Contact Us
