@@ -151,7 +151,7 @@ const Questions = () => {
         </form>
       </div>
       <div
-        className="hidden md:block absolute right-0 bottom-0 w-1/2 h-full z-10"
+        className="hidden md:block absolute right-0 bottom-0 w-3/5 h-[140vh] z-10"
         style={{
           backgroundImage: `url(${astronaut})`,
           backgroundSize: 'cover',
