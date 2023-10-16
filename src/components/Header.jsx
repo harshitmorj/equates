@@ -60,7 +60,7 @@ const Header = ({ activeTab, toggle }) => {
     return (
         <header
             ref={headerRef}
-            className={`bg-black text-white absolute p-2 top-0 w-full z-10 transition-transform ${isHeaderVisible ? 'transform translateY(0)' : 'transform translateY(-100%)'
+            className={`bg-black text-white absolute p-2 top-0 w-full z-30 transition-transform ${isHeaderVisible ? 'transform translateY(0)' : 'transform translateY(-100%)'
                 }`}
         >
             <div className="mx-auto flex justify-between items-center p-2">

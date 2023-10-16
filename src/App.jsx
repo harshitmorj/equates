@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import BlankPage from './components/Blank';
 import Home from './pages/Landing/Home';
+import TechProd from './pages/Landing/TechProd';
 import Technology from './pages/Technology/Technology';
 import Products from './pages/Products/Products';
 import Questions from './pages/Products/Questions';
@@ -23,11 +23,11 @@ function App() {
         <Header activeTab={activeTab} toggle={toggle} />
         <main className="absolute top-20 left-0 right-0 bg-black">
           <Routes>
-            <Route path="/" element={<div><Home /><Footer /></div>} />
-            <Route path="/technology" element={<div><Technology /><Footer /></div>} />
+            <Route path="/" element={<div><Home /><TechProd /><Footer /></div>} />
+            <Route path="/technology" element={<div><Technology /><Questions /><Footer /></div>} />
             <Route path="/products" element={<div><Products /><Questions /><Footer /></div>} />
             <Route path="/about" element={<div><AboutUs /><Questions /><Footer /></div>} />
-            <Route path="/contact" element={<div><ContactUs /><Footer /></div>} />
+            <Route path="/contact" element={<div><ContactUs /><Questions /><Footer /></div>} />
           </Routes>
         </main>
       </div>
