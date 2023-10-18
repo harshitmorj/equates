@@ -39,7 +39,7 @@ const Home = () => {
         <div style={vectorImage2} className='hidden md:block'></div>
       </div>
       
-      <h1 className="text-5xl md:text-7xl font-bold mb-4 p-20 z-10">Lorem ipsum dolor sit amet <br></br> consectetur adipisicing elit. </h1>
+      <h1 className="text-5xl md:text-7xl font-bold mb-4 pt-40 md:p-20 z-10">Lorem ipsum dolor sit amet <br></br> consectetur adipisicing elit. </h1>
       <button className="bg-purple-700 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white md:w-1/5 font-bold py-2 px-4 rounded z-10"> Read More </button>
     </div>
   );
