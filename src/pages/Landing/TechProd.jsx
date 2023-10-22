@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import home_bg from '../../assets/home_bg.svg';
 import home_bg2 from '../../assets/home_bg2.png';
 import homeprod1 from '../../assets/homeprod1.svg';
 import homeprod2 from '../../assets/homeprod2.svg';
@@ -192,19 +191,6 @@ const TechProd = () => {
                 </div>
             </div> */}
 
-            {/* Planet */}
-            <div
-                className="md:h-[150vh] h-screen flex flex-col w-full h-full text-white"
-            >
-                <div className='w-full h-full'
-                    style={{
-                        backgroundImage: `url(${home_bg})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                >
-                </div>
-            </div>
 
             {/* Our Products */}
             <div
