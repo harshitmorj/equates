@@ -5,7 +5,7 @@ import homeprod1 from '../../assets/homeprod1.svg';
 import homeprod2 from '../../assets/homeprod2.svg';
 import homeprod3 from '../../assets/homeprod3.svg';
 import homeprod4 from '../../assets/homeprod4.svg';
-import planet1 from '../../assets/planet1.svg';
+
 
 const TechProd = () => {
     const [bgColor, setBgColor] = useState('transparent');
@@ -198,7 +198,7 @@ const TechProd = () => {
             >
                 <div className='w-full h-full'
                     style={{
-                        backgroundImage: `url(${planet1})`,
+                        backgroundImage: `url(${home_bg})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
