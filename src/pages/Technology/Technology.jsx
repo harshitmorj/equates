@@ -25,7 +25,7 @@ const Technology = () => {
 
   return (
     <ParallaxProvider>
-      <div className="items-center flex flex-col justify-center overflow-hidden">
+      <div className="h-[80vh] items-center flex flex-col justify-center overflow-hidden">
         <div className=''
         style={{
             backgroundImage: `url(${logo})`,
@@ -41,14 +41,14 @@ const Technology = () => {
         </div>
         <div className=" flex flex-col justify-center items-center bg-black text-white text-center m-10">
           <h2
-            className="text-7xl md:text-5xl font-bold mb-4"
+            className="text-7xl md:text-5xl font-bold mb-4 z-10 mb-96"
             style={{ fontSize: `${scrollPosition}rem` }}
           >
             TECHNOLOGY
           </h2>
 
         </div>
-        <div className=" flex flex-col justify-center items-center bg-black text-white">
+        <div className="absolute flex flex-col justify-center items-center bg-black text-white overflow-hidden">
           <Parallax y={[-20, 20]}>
             <img
               src={BluePlanet}

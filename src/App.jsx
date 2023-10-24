@@ -6,6 +6,8 @@ import Home from './pages/Landing/Home';
 import Satellite from './pages/Landing/Satellite';
 import TechProd from './pages/Landing/TechProd';
 import Technology from './pages/Technology/Technology';
+import EarthSat from './pages/Technology/EarthSat';
+import SatelliteConstellation from './pages/Technology/SatelliteConstellation';
 import Products from './pages/Products/Products';
 import Questions from './pages/Products/Questions';
 import AboutUs from './pages/About/About';
@@ -25,7 +27,8 @@ function App() {
         <main className="absolute top-20 left-0 right-0 bg-black">
           <Routes>
             <Route path="/" element={<div><Home /><Satellite /><TechProd /><Footer /></div>} />
-            <Route path="/technology" element={<div><Technology /><Questions /><Footer /></div>} />
+            {/* <Route path="/technology" element={<div><Technology /><EarthSat /><Questions /><Footer /></div>} /> */}
+            <Route path="/technology" element={<div><Technology /><EarthSat /><SatelliteConstellation /><Questions /><Footer /></div>} />
             <Route path="/products" element={<div><Products /><Footer /></div>} />
             <Route path="/about" element={<div><AboutUs /><Footer /></div>} />
             <Route path="/contact" element={<div><ContactUs /><Questions /><Footer /></div>} />

@@ -42,6 +42,13 @@ const TechProd = () => {
         product4: homeprod4,
     };
 
+    const prodDesc = {
+        product1: 'This is the description for Product 1.',
+        product2: 'This is the description for Product 2.',
+        product3: 'This is the description for Product 3.',
+        product4: 'This is the description for Product 4.',
+    };
+
     const handleProductClick = (product) => {
         setSelectedProduct(product);
 
@@ -194,7 +201,7 @@ const TechProd = () => {
 
             {/* Our Products */}
             <div
-                className="md:h-screen md:flex justify-center items-center text-white p-2"
+                className="md:h-screen md:flex justify-center items-center text-white p-2 overflow-hidden"
             >
                 <div
                     className="container mx-auto p-4 px-10 md:w-1/2 md:h-2/3 rounded-xl items-center justify-center"
@@ -205,7 +212,7 @@ const TechProd = () => {
                 >
                     <h2 className="text-6xl font-bold mb-6 mt-10">Products</h2>
                     <p className="text-2xl mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore qui blanditiis earum dolorum in fugiat, quo voluptates eum numquam alias sequi cumque? Totam delectus incidunt assumenda repudiandae libero dolorum voluptatem!
+                        {prodDesc[selectedProduct]}
                     </p>
                     <div className="flex mt-20">
                         <button
@@ -252,7 +259,7 @@ const TechProd = () => {
                         }}
                     />
                 </div>
-                <div className="md:w-2/5 md:rounded-lg md:overflow-hidden">
+                <div className="md:w-2/5 md:rounded-lg md:overflow-hidden hover:scale-110 transform transition duration-500">
                     {selectedProduct && (
                         <img src={productImages[selectedProduct]} alt={`${selectedProduct}`} className="w-full h-96 md:h-full" />
                     )}

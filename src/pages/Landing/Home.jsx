@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import home_bg from '../../assets/home_bg.svg';
+import home_bg from '../../assets/home_bg.jpg';
 import home1 from '../../assets/home1.svg';
 import home2 from '../../assets/home2.svg';
 

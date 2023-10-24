@@ -54,7 +54,7 @@ const ProductCard = ({ title, image, details }) => {
       {
         showCard && (
           <div className="flex fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-75 z-30 p-2">
-            <div className="flex p-8 rounded-lg bg-gray-900">
+            <div className="flex p-8 rounded-lg bg-gray-900 w-3/4">
               <img src={image} alt={title} className="w-1/3" />
               <div className="flex flex-col justify-center items-center h-full p-20 m-0">
                 <p className="text-4xl mt-4 mb-4">{title}</p>
