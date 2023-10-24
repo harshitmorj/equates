@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
-import BluePlanet from '../../assets/BluePlanet.svg';
 import satellite from '../../assets/satellite.png';
+import tech_bg4 from '../../assets/tech_bg4.jpg';
 
 const getRandomValue = (min, max) => {
     return (Math.random() * (max - min) + min).toFixed(2) + 's';
@@ -15,7 +15,7 @@ const SatelliteConstellation = () => {
         const scrollY = window.scrollY;
 
         // Determine the number of visible satellites based on scroll position
-        const visibleSatellites = Math.min(Math.floor((scrollY-1000) / 50), 100);
+        const visibleSatellites = Math.min(Math.floor((scrollY - 1000) / 50), 100);
 
         // Generate satellites
         const newSatellites = [...Array(100)].map((_, index) => {
@@ -55,32 +55,39 @@ const SatelliteConstellation = () => {
 
     return (
         <ParallaxProvider>
-            <div className="h-screen items-center flex flex-col justify-center relative overflow-hidden">
-                <div className='h-screen items-center flex flex-col justify-center relative'>     {satellites}
+            <div className="h-screen items-center flex flex-col justify-center relative overflow-hidden"
+                style={{
+                    backgroundImage: `url(${tech_bg4})`,
+                    height: '100vh',
+                    width: '100vw',
+                }}
+            >
+                <div className='h-screen items-center flex flex-col justify-center relative'>
+                    {satellites}
                 </div>
                 <style>
-                {[...Array(100)].map((_, index) => (
-                    `
+                    {[...Array(100)].map((_, index) => (
+                        `
                     @keyframes satellitePath2${index} {
                         0% {
                             transform: translate(0, 0);
                         }
                         25% {
-                            transform: translate(${46 * Math.cos((index*8 / 100) * 2 * Math.PI)}vw, ${47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
+                            transform: translate(${46 * Math.cos((index * 8 / 100) * 2 * Math.PI)}vw, ${47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
                         }
                         50% {
                             transform: translate(0, 0);
                         }
                         75% {
-                            transform: translate(${-46 * Math.cos((index*8 / 100) * 2 * Math.PI)}vw, ${-47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
+                            transform: translate(${-46 * Math.cos((index * 8 / 100) * 2 * Math.PI)}vw, ${-47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
                         }
                         100% {
                             transform: translate(0, 0);
                         }
                     }
                     `
-                ))}
-            </style>
+                    ))}
+                </style>
             </div>
         </ParallaxProvider>
     );

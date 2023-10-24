@@ -12,22 +12,26 @@ const productData = [
   {
     title: 'Product no. 1',
     image: product1,
-    details: 'It’s a beautiful dual channel-based Ground to Space Communication Link that has bandwidth flexibilities ranging 1Gbps to as high as 10Gbps.'
+    details: 'It’s a beautiful dual channel-based Ground to Space Communication Link that has bandwidth flexibilities ranging 1Gbps to as high as 10Gbps.',
+    position: 'left'
   },
   {
     title: 'Product no. 2',
     image: product2,
-    details: 'A smart meshing capability induced Optical Payload for LEO – LEO Intersatellite communication but same orbit.'
+    details: 'A smart meshing capability induced Optical Payload for LEO – LEO Intersatellite communication but same orbit.',
+    position: 'left'
   },
   {
     title: 'Product no. 3',
     image: product3,
-    details: 'Big Brother to our earlier model. Induced Optical Payload for LEO – LEO Intersatellite communication but different orbit, Azimuthal.'
+    details: 'Big Brother to our earlier model. Induced Optical Payload for LEO – LEO Intersatellite communication but different orbit, Azimuthal.',
+    position: 'right'
   },
   {
     title: 'Product no. 4',
     image: product4,
-    details: 'The GodFather. Can parcel your data 80000km away and back. More power, highly efficient.'
+    details: 'The GodFather. Can parcel your data 80000km away and back. More power, highly efficient.',
+    position: 'right'
   },
 
 ];
@@ -75,7 +79,7 @@ const Products = () => {
       <div className="p-5 py-10">
         {productData.map((product, index) => (
           <div className="" key={index}>
-            <ProductCard title={product.title} image={product.image} details={product.details} />
+            <ProductCard title={product.title} image={product.image} details={product.details} position={product.position} />
           </div>
         ))}
       </div>

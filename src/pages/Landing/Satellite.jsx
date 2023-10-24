@@ -10,18 +10,34 @@ const Satellite = () => {
     {
       name: 'Satellite 1',
       info: 'Information for Satellite 1.',
+      position: {
+        x: '50%',
+        y: '40%',
+      },
     },
     {
       name: 'Satellite 2',
       info: 'Information for Satellite 2.',
+      position: {
+        x: '80%',
+        y: '50%',
+      },
     },
     {
       name: 'Satellite 3',
       info: 'Information for Satellite 3.',
+      position: {
+        x: '50%',
+        y: '60%',
+      },
     },
     {
       name: 'Satellite 4',
       info: 'Information for Satellite 4.',
+      position: {
+        x: '20%',
+        y: '50%',
+      },
     },
   ];
 
@@ -40,15 +56,15 @@ const Satellite = () => {
       }}
     >
       {/* Planet */}
-      <div className="md:h-screen bg-blue-50/60 rounded h-screen flex flex-col w-full h-full text-white items-center justify-center">
+      <div className="md:h-screen bg-blue-50/60 rounded h-screen flex flex-col w-full h-full text-white items-center justify-center z-10">
         <div className="w-full h-full border rounded-full items-center justify-center flex">
           {sites.map((site, index) => (
             <div
               key={index}
               className="w-16 h-16 absolute"
               style={{
-                top: '50%',
-                left: `${50 + 20 * Math.cos((index / 4) * 2 * Math.PI)}%`,
+                top: site.position.y,
+                left: site.position.x,
                 cursor: 'pointer',
               }}
               onClick={() => handleSiteClick(index)}
@@ -72,7 +88,7 @@ const Satellite = () => {
 
       {/* Display selected Satellite info */}
       {selectedSite && (
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 ">
           <div className="bg-gray-700 p-4 rounded shadow">
             <h2>{selectedSite.name}</h2>
             <p>{selectedSite.info}</p>

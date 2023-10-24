@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import home_bg2 from '../../assets/home_bg2.png';
-import homeprod1 from '../../assets/homeprod1.svg';
-import homeprod2 from '../../assets/homeprod2.svg';
-import homeprod3 from '../../assets/homeprod3.svg';
-import homeprod4 from '../../assets/homeprod4.svg';
+import homeprod1 from '../../assets/product1.png';
+import homeprod2 from '../../assets/product2.jpg';
+import homeprod3 from '../../assets/product3.jpg';
+import homeprod4 from '../../assets/product4.jpg';;
 
 
 const TechProd = () => {
@@ -35,19 +35,44 @@ const TechProd = () => {
         setHoveredRegion(color);
     };
 
+    const productData = [
+        {
+            title: 'Product no. 1',
+            image: homeprod1,
+            details: 'It’s a beautiful dual channel-based Ground to Space Communication Link that has bandwidth flexibilities ranging 1Gbps to as high as 10Gbps.',
+        },
+        {
+            title: 'Product no. 2',
+            image: homeprod2,
+            details: 'A smart meshing capability induced Optical Payload for LEO – LEO Intersatellite communication but same orbit.',
+        },
+        {
+            title: 'Product no. 3',
+            image: homeprod3,
+            details: 'Big Brother to our earlier model. Induced Optical Payload for LEO – LEO Intersatellite communication but different orbit, Azimuthal.',
+        },
+        {
+            title: 'Product no. 4',
+            image: homeprod4,
+            details: 'The GodFather. Can parcel your data 80000km away and back. More power, highly efficient.',
+        },
+
+    ];
+
     const productImages = {
-        product1: homeprod1,
-        product2: homeprod2,
-        product3: homeprod3,
-        product4: homeprod4,
+        product1: productData[0].image,
+        product2: productData[1].image,
+        product3: productData[2].image,
+        product4: productData[3].image,
     };
 
     const prodDesc = {
-        product1: 'This is the description for Product 1.',
-        product2: 'This is the description for Product 2.',
-        product3: 'This is the description for Product 3.',
-        product4: 'This is the description for Product 4.',
+        product1: productData[0].details,
+        product2: productData[1].details,
+        product3: productData[2].details,
+        product4: productData[3].details,
     };
+
 
     const handleProductClick = (product) => {
         setSelectedProduct(product);
@@ -221,7 +246,7 @@ const TechProd = () => {
                             className={`text-2xl p-2 hover:border-0 border-0 ${selectedProduct === 'product1' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod1} alt="product1" className="" />
+                            <img src={homeprod1} alt="product1" className="h-40 w-40 rounded-full" />
                         </button>
                         <button
                             id="button-product2"
@@ -229,7 +254,7 @@ const TechProd = () => {
                             className={`text-2xl p-2 hover:border-0 border-0 ${selectedProduct === 'product2' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod2} alt="product2" className="" />
+                            <img src={homeprod2} alt="product2" className="h-40 w-40 rounded-full" />
                         </button>
                         <button
                             id="button-product3"
@@ -237,7 +262,7 @@ const TechProd = () => {
                             className={`text-2xl p-2 hover:border-0 border-0 ${selectedProduct === 'product3' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod3} alt="product3" className="" />
+                            <img src={homeprod3} alt="product3" className="h-40 w-40 rounded-full" />
                         </button>
                         <button
                             id="button-product4"
@@ -245,7 +270,7 @@ const TechProd = () => {
                             className={`text-2xl p-2 hover:border-0 border-0 ${selectedProduct === 'product4' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod4} alt="product4" className="" />
+                            <img src={homeprod4} alt="product4" className="h-40 w-40 rounded-full" />
                         </button>
                     </div>
                     <hr
@@ -261,7 +286,7 @@ const TechProd = () => {
                 </div>
                 <div className="md:w-2/5 md:rounded-lg md:overflow-hidden hover:scale-110 transform transition duration-500">
                     {selectedProduct && (
-                        <img src={productImages[selectedProduct]} alt={`${selectedProduct}`} className="w-full h-96 md:h-full" />
+                        <img src={productImages[selectedProduct]} alt={`${selectedProduct}`} className="w-3/4 h-96 md:h-full" />
                     )}
                 </div>
             </div>

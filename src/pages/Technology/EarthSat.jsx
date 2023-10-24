@@ -1,6 +1,7 @@
 import React from 'react';
 import BluePlanet from '../../assets/BluePlanet.svg';
 import satellite from '../../assets/satellite.png';
+import tech_bg1 from '../../assets/tech_bg1.jpg';
 
 const getRandomValue = (min, max) => {
     return (Math.random() * (max - min) + min).toFixed(2) + 's';
@@ -29,7 +30,13 @@ const EarthSat = () => {
     });
 
     return (
-        <div className="h-screen items-center flex flex-col justify-center relative">
+        <div className="h-screen items-center flex flex-col justify-center relative overflow-hidden"
+            style={{
+                backgroundImage: `url(${tech_bg1})`,
+                height: '100vh',
+                width: '100vw',
+            }}
+        >
             <div
                 className='h-screen items-center flex flex-col justify-center relative'
                 style={{

@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import tech_bg3 from '../../assets/tech_bg3.jpg';
 
 
 const GroundSatellite = () => {
     return (
         <div className="h-screen items-center flex flex-col justify-center relative overflow-hidden"
         style={{
-            // Background with gradient from blue-400 to orange
-            backgroundImage: 'linear-gradient(180deg, #3182CE, #F6AD55)',
+            backgroundImage: `url(${tech_bg3})`,
+            height: '100vh',
+            width: '100vw',
             backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
         }}>
 
         </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import airplane1 from '../../assets/airplane1.png';
 import airplane2 from '../../assets/airplane2.png';
+import tech_bg2 from '../../assets/tech_bg2.jpg';
 
 const Aeroplane = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -28,7 +29,14 @@ const Aeroplane = () => {
 
   return (
     <ParallaxProvider>
-      <div className="h-screen bg-blue-400 items-center flex flex-col justify-center overflow-hidden bg-blue-400">
+      <div className="h-screen bg-blue-400 items-center flex flex-col justify-center overflow-hidden bg-blue-400"
+        style={{    
+            backgroundImage: `url(${tech_bg2})`,
+            height: '100vh',
+            width: '100vw',
+        }}
+        >
+
         <div className=" flex justify-center items-center text-white">
           <Parallax y={[-20, 20]}>
             <div className="w-16 h-16 mr-[900px]" style={airplaneStyles}>
