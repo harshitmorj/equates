@@ -86,7 +86,7 @@ const Header = ({ activeTab, toggle }) => {
                         )}
                     </button>
                 </div>
-                <nav className="space-x-20 pr-20 text-2xl flex text-white hidden lg:flex">
+                <nav className="space-x-20 pr-20 text-2xl flex text-white hidden lg:flex p-2">
                     <NavLink
                         to="/"
                         exact
@@ -120,13 +120,13 @@ const Header = ({ activeTab, toggle }) => {
                         <div className="h-1 w-full bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         About Us
                     </NavLink>
-                    <NavLink
+                    {/* <NavLink
                         to="/contact"
                         className={` p-3 hover:bg-blue-500 hover:scale-110 transition duration-500 ${activeTab === 'contact' ? 'bg-gray-200 text-purple-700 hover:text-purple-700' : 'bg-purple-700 hover:text-white text-white'}`}
                         onClick={() => toggle('contact')}
                     >
                         Contact Us
-                    </NavLink>
+                    </NavLink> */}
 
                 </nav>
                 <nav
@@ -137,7 +137,7 @@ const Header = ({ activeTab, toggle }) => {
                     <Link to="/technology" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'technology' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('technology'); toggleDropDown(); }}> Technology </Link>
                     <Link to="/products" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'products' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('products'); toggleDropDown(); }}> Products </Link>
                     <Link to="/about" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'about' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('about'); toggleDropDown(); }}> About Us </Link>
-                    <Link to="/contact" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'contact' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('contact'); toggleDropDown(); }}> Contact Us </Link>
+                    {/* <Link to="/contact" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'contact' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('contact'); toggleDropDown(); }}> Contact Us </Link> */}
                 </nav>
             </div>
         </header>
