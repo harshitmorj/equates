@@ -66,13 +66,13 @@ const SatelliteConstellation = () => {
                             transform: translate(0, 0);
                         }
                         25% {
-                            transform: translate(${46 * Math.cos((index*4 / 100) * 2 * Math.PI)}vw, ${47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
+                            transform: translate(${46 * Math.cos((index*8 / 100) * 2 * Math.PI)}vw, ${47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
                         }
                         50% {
                             transform: translate(0, 0);
                         }
                         75% {
-                            transform: translate(${-46 * Math.cos((index*4 / 100) * 2 * Math.PI)}vw, ${-47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
+                            transform: translate(${-46 * Math.cos((index*8 / 100) * 2 * Math.PI)}vw, ${-47 * Math.sin((index / 100) * 2 * Math.PI)}vh);
                         }
                         100% {
                             transform: translate(0, 0);

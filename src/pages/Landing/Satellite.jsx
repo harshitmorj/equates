@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import home_bg2 from '../../assets/home_bg2.png';
-import Space from '../../assets/Space.svg';
-import Space1 from '../../assets/Space(1).svg';
-import Space2 from '../../assets/Space(2).svg';
-import Space3 from '../../assets/Space(3).svg';
+import satellite from '../../assets/satellite.png';
+import PurplePlanet from '../../assets/PurplePlanet.svg';
+import circle from '../../assets/circle.png';
 
 
 
@@ -22,15 +21,22 @@ const Satellite = () => {
 
             {/* Planet */}
             <div
-                className="md:h-[150vh] bg-blue-50/60 rounded h-screen flex flex-col w-full h-full text-white"
+                className="md:h-screen bg-blue-50/60 rounded h-screen flex flex-col w-full h-full text-white items-center justify-center"
             >
-                <div className='w-full h-full'
-                    style={{
-                        backgroundImage: `url(${Space})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                >
+                <div className='w-full h-full border rounded-full items-center justify-center flex'>
+                    <img src={satellite} alt="satellite" className='w-16 h-16' />
+                    <div className='w-96 h-96 border rounded-full items-center justify-center flex'>
+                        <div className='w-80 h-80 border rounded-full'>
+                            <div className='relative w-full h-full'
+                                style={{
+                                    backgroundImage: `url(${PurplePlanet})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                }}
+                            >
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
