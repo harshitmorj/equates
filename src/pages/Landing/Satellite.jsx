@@ -5,6 +5,7 @@ import PurplePlanet from '../../assets/PurplePlanet.svg';
 
 const Satellite = () => {
   const [selectedSite, setSelectedSite] = useState(null);
+  const [rotationDegree, setRotationDegree] = useState(0);
 
   const sites = [
     {
@@ -12,7 +13,7 @@ const Satellite = () => {
       info: 'Information for Satellite 1.',
       position: {
         x: '50%',
-        y: '40%',
+        y: '20%',
       },
     },
     {
@@ -28,7 +29,7 @@ const Satellite = () => {
       info: 'Information for Satellite 3.',
       position: {
         x: '50%',
-        y: '60%',
+        y: '80%',
       },
     },
     {
@@ -43,6 +44,9 @@ const Satellite = () => {
 
   const handleSiteClick = (index) => {
     setSelectedSite(sites[index]);
+    // Calculate the rotation degree to move the selected satellite on top
+    const rotation = ((4 - index) * 90) % 360;
+    setRotationDegree(rotation);
   };
 
   return (
@@ -56,8 +60,15 @@ const Satellite = () => {
       }}
     >
       {/* Planet */}
-      <div className="md:h-screen bg-blue-50/60 rounded h-screen flex flex-col w-full h-full text-white items-center justify-center z-10">
-        <div className="w-full h-full border rounded-full items-center justify-center flex">
+      <div
+        className="md:h-screen bg-blue-50/60 rounded h-screen flex flex-col w-full h-full text-white items-center justify-center z-10"
+      >
+        <div className="w-[100vh] h-full border rounded-full items-center justify-center flex"
+          style={{
+            transform: `rotate(${rotationDegree}deg)`,
+            transformOrigin: 'center center',
+            transition: 'transform 0.5s ease-in-out', // Smooth transition
+          }}>
           {sites.map((site, index) => (
             <div
               key={index}
@@ -66,22 +77,30 @@ const Satellite = () => {
                 top: site.position.y,
                 left: site.position.x,
                 cursor: 'pointer',
+                transform: `rotate(${-rotationDegree}deg)`,
+                transformOrigin: 'center center',
+                transition: 'transform 0.5s ease-in-out', // Smooth transition
               }}
               onClick={() => handleSiteClick(index)}
             >
               <img src={satellite} alt="satellite" className="w-16 h-16" />
             </div>
           ))}
+          
 
-          <div className="w-96 h-96 border rounded-full">
-            <div
-              className="relative w-full h-full"
-              style={{
-                backgroundImage: `url(${PurplePlanet})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            ></div>
+          <div className="w-[80vh] h-[80vh] border rounded-full items-center justify-center flex">
+            <div className="w-[60vh] h-[60vh] border rounded-full items-center justify-center flex">
+              <div className="w-[40vh] h-[40vh] border rounded-full items-center justify-center flex">
+                <div
+                  className="relative w-full h-full"
+                  style={{
+                    backgroundImage: `url(${PurplePlanet})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
