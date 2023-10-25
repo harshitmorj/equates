@@ -3,32 +3,32 @@ import ProductCard from './ProductCard';  // Import the ProductCard component
 import product1_vector from '../../assets/product1_vector.svg';
 import product1 from '../../assets/product1.png';
 import product2_vector from '../../assets/product2_vector.svg';
-import product2 from '../../assets/product2.jpg';
+import product2 from '../../assets/product2.png';
 import product3_vector from '../../assets/product3_vector.svg';
-import product3 from '../../assets/product3.jpg';
-import product4 from '../../assets/product4.jpg';
+import product3 from '../../assets/product3.png';
+import product4 from '../../assets/product4.png';
 
 const productData = [
   {
-    title: 'Product 1',
+    title: 'Product 1: Ground to Space',
     image: product1,
     details: 'It’s a beautiful dual channel-based Ground to Space Communication Link that has bandwidth flexibilities ranging 1Gbps to as high as 10Gbps.',
     position: 'left'
   },
   {
-    title: 'Product 2',
+    title: 'Product 2: Same Orbit Communication ',
     image: product2,
     details: 'A smart meshing capability induced Optical Payload for LEO – LEO Intersatellite communication but same orbit.',
     position: 'left'
   },
   {
-    title: 'Product 3',
+    title: 'Product 3: Different Orbit Communication',
     image: product3,
     details: 'Big Brother to our earlier model. Induced Optical Payload for LEO – LEO Intersatellite communication but different orbit, Azimuthal.',
     position: 'right'
   },
   {
-    title: 'Product 4',
+    title: 'Product 4: Multiple Higher Orbit Communication from ground to Space',
     image: product4,
     details: 'The GodFather. Can parcel your data 80000km away and back. More power, highly efficient.',
     position: 'right'
