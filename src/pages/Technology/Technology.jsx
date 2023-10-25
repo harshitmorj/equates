@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import BluePlanet from '../../assets/BluePlanet.svg';
-import logo from '../../assets/logo.jpg';
+import logo from '../../assets/logo_nobg.png';
 import tech_bg1 from '../../assets/tech_bg1.jpg';
 
 const Technology = () => {
@@ -31,6 +31,7 @@ const Technology = () => {
             backgroundImage: `url(${tech_bg1})`,
             height: '80vh',
             width: '100vw',
+            backgroundBlendMode: 'multiply',
         }}
         >
         <div className=''
@@ -43,7 +44,7 @@ const Technology = () => {
             width: '30vw',
             position: 'absolute',
             top: '0',
-            zIndex: '10',
+            zIndex: '20',
             
         }}>
         </div>
@@ -61,7 +62,7 @@ const Technology = () => {
             <img
               src={BluePlanet}
               alt="Blue Planet"
-              className="w-full"
+              className="w-full h-full object-cover"
               style={{
                 transform: `scale(${scrollPosition * 0.1}) rotate(${scrollPosition * 4}deg)`,
                 opacity: 1 - scrollPosition * 0.5 / 10,

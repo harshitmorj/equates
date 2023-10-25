@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import home_bg2 from '../../assets/home_bg2.png';
-import homeprod1 from '../../assets/product1.png';
-import homeprod2 from '../../assets/product2.jpg';
-import homeprod3 from '../../assets/product3.jpg';
-import homeprod4 from '../../assets/product4.jpg';;
+// import homeprod1 from '../../assets/product1.png';
+// import homeprod2 from '../../assets/product2.jpg';
+// import homeprod3 from '../../assets/product3.jpg';
+// import homeprod4 from '../../assets/product4.jpg';
+import homeprod1 from '../../assets/homeprod1.svg';
+import homeprod2 from '../../assets/homeprod2.svg';
+import homeprod3 from '../../assets/homeprod3.svg';
+import homeprod4 from '../../assets/homeprod4.svg';
 
 
 const TechProd = () => {

@@ -93,7 +93,7 @@ const Header = ({ activeTab, toggle }) => {
                         className={`relative group flex items-center justify-center ${activeTab === 'home' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('home')}
                     >
-                        <div className="h-1 w-full bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                        <div className="h-1 w-full -mb-2 bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         Home
                     </NavLink>
                     <NavLink
@@ -101,7 +101,7 @@ const Header = ({ activeTab, toggle }) => {
                         className={`relative group flex items-center justify-center ${activeTab === 'technology' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('technology')}
                     >
-                        <div className="h-1 w-full bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                        <div className="h-1 w-full -mb-2 bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         Technology
                     </NavLink>
                     <NavLink
@@ -109,7 +109,7 @@ const Header = ({ activeTab, toggle }) => {
                         className={`relative group flex items-center justify-center   ${activeTab === 'products' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('products')}
                     >
-                        <div className="h-1 w-full bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                        <div className="h-1 w-full -mb-2 bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         Products
                     </NavLink>
                     <NavLink
@@ -117,7 +117,7 @@ const Header = ({ activeTab, toggle }) => {
                         className={`relative group flex items-center justify-center   ${activeTab === 'about' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('about')}
                     >
-                        <div className="h-1 w-full bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                        <div className="h-1 w-full -mb-2 bg-blue-500 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         About Us
                     </NavLink>
                     {/* <NavLink

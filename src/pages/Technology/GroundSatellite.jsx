@@ -12,6 +12,7 @@ const GroundSatellite = () => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            backgroundBlendMode: 'multiply',
         }}>
 
         </div>

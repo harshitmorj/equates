@@ -45,10 +45,10 @@ const Home = () => {
       </div>
 
       <h1 className="text-5xl md:text-7xl font-bold mb-4 pt-40 md:p-20 z-10">
-        Multi-Orbital Constellation using High Speed Optical Communication Payloads in Space
+        Multi-Orbital Optical Communication Payloads in Space
       </h1>
       <button
-        className="bg-purple-700/20 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-3xl font-bold py-2 px-4 rounded z-10"
+        className="bg-blue-700/80 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-5xl lg:text-9xl py-3 font-bold px-8 rounded z-10"
         onClick={toggleCard}
       >
         +

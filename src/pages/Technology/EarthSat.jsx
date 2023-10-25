@@ -35,6 +35,7 @@ const EarthSat = () => {
                 backgroundImage: `url(${tech_bg1})`,
                 height: '100vh',
                 width: '100vw',
+                backgroundBlendMode: 'multiply',
             }}
         >
             <div
@@ -45,7 +46,7 @@ const EarthSat = () => {
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
                     height: '100vh',
-                    width: '50vw',
+                    width: '100vh',
                 }}
             >
                 {satellites}
@@ -58,13 +59,13 @@ const EarthSat = () => {
                             transform: translate(0, 0);
                         }
                         25% {
-                            transform: translate(${40 * Math.cos((index / 6) * 2 * Math.PI)}vw, ${47 * Math.sin((index / 6) * 2 * Math.PI)}vh);
+                            transform: translate(${(Math.random() - 0.5) * 100}vw, ${(Math.random() - 0.5) * 100}vh);
                         }
                         50% {
-                            transform: translate(0, 0);
+                            transform: translate(${(Math.random() - 0.5) * 100}vw, ${(Math.random() - 0.5) * 100}vh);
                         }
                         75% {
-                            transform: translate(${-40 * Math.cos((index / 6) * 2 * Math.PI)}vw, ${-47 * Math.sin((index / 6) * 2 * Math.PI)}vh);
+                            transform: translate(${(Math.random() - 0.5) * 100}vw, ${(Math.random() - 0.5) * 100}vh);
                         }
                         100% {
                             transform: translate(0, 0);

@@ -51,7 +51,7 @@ const ProductCard = ({ title, image, details, position }) => {
               <img
                 src={image}
                 alt={title}
-                className="relative bottom-[200px] left-[600px] xl:left-[700px] 2xl:left-[900px] w-full hover:scale-110 transform transition duration-500 ease-in-out"
+                className="relative bottom-[200px] left-[600px] xl:left-[700px] 2xl:left-[900px] w-[50vh] h-[50vh] hover:scale-110 transform transition duration-500 ease-in-out"
               />
             </div>
           </div>
@@ -65,10 +65,10 @@ const ProductCard = ({ title, image, details, position }) => {
                 <img
                   src={image}
                   alt={title}
-                  className="relative top-[170px] left-[50px] xl:left-[100px] 2xl:left-[200px] w-full hover:scale-110 transform transition duration-500 ease-in-out"
+                  className="relative top-[170px] left-[50px] xl:left-[100px] 2xl:left-[200px] w-[50vh] h-[50vh] hover:scale-110 transform transition duration-500 ease-in-out"
                   />
               </div>
-              <div className="relative text-left top-[170px] left-[300px] xl:left-[500px] 2xl:left-[800px]">
+              <div className="relative text-left top-[170px] left-[200px] xl:left-[500px] 2xl:left-[800px]">
                 <p className="text-8xl mb-4 py-4">{title}</p>
                 <button className="bg-purple-500 text-black px-8 py-4" onClick={toggleCard}>
                   Product Details

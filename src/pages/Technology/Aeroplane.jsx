@@ -34,6 +34,7 @@ const Aeroplane = () => {
             backgroundImage: `url(${tech_bg2})`,
             height: '100vh',
             width: '100vw',
+            backgroundBlendMode: 'multiply',
         }}
         >
 
