@@ -51,7 +51,7 @@ const ProductCard = ({ title, image, details, position }) => {
                   className="relative top-[170px] left-[50px] xl:left-[100px] 2xl:left-[200px] w-[50vh] h-[50vh] hover:scale-110 transform transition duration-500 ease-in-out"
                 />
               </div>
-              <div className="relative text-left top-[170px] left-[200px] xl:left-[500px] 2xl:left-[600px] w-1/2">
+              <div className="relative text-left top-[170px] left-[200px] xl:left-[200px] 2xl:left-[300px] w-1/2">
                 <p className="text-5xl xl:text-8xl mb-4 py-4">{title}</p>
                 <p className="text-xl">{details}</p>
               </div>
