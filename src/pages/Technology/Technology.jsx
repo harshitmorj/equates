@@ -1,78 +1,89 @@
 import React, { useEffect, useState } from 'react';
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
-import BluePlanet from '../../assets/BluePlanet.svg';
-import logo from '../../assets/logo_nobg.png';
-import tech_bg1 from '../../assets/tech_bg1.jpg';
+import tech1 from '../../assets/tech1.png';
+import tech2 from '../../assets/tech2.png';
+import tech3 from '../../assets/tech3.png';
+import tech4 from '../../assets/tech4.png';
+import tech5 from '../../assets/tech5.png';
+import tech6 from '../../assets/tech6.png';
+
 
 const Technology = () => {
-  const [scrollPosition, setScrollPosition] = useState(8);
 
-  const handleScroll = () => {
-    // Get the scroll position
-    const scrollY = window.scrollY;
-    // Calculate the new font size based on the scroll position
-    const fontSize = 8 + 2 * scrollY / 100;
-
-    // Update the font size and rotation state
-    setScrollPosition(fontSize);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return (
-    <ParallaxProvider>
-      <div className="h-[80vh] items-center flex flex-col justify-center overflow-hidden"
-        style={{
-            backgroundImage: `url(${tech_bg1})`,
-            height: '80vh',
-            width: '100vw',
-            backgroundBlendMode: 'multiply',
-        }}
-        >
+    return (
         <div className=''
-        style={{
-            backgroundImage: `url(${logo})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            height: '15vh',
-            width: '30vw',
-            position: 'absolute',
-            top: '0',
-            zIndex: '20',
-            
-        }}>
+            style={{
+                // linear gradient from black to blue
+                backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
+            }}>
+            <div className="h-screen"
+                style={{
+                    backgroundImage: `url(${tech1})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundBlendMode: 'multiply',
+                }}
+            >
+            </div>
+            <div className="h-screen"
+                style={{
+                    backgroundImage: `url(${tech2})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundBlendMode: 'multiply',
+                }}
+            >
+            </div>
+            <div className="h-screen"
+                style={{
+                    backgroundImage: `url(${tech3})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundBlendMode: 'multiply',
+                }}
+            >
+            </div>
+            <div
+                style={{
+                    backgroundImage: `url(${tech4})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundBlendMode: 'multiply',
+                }}>
+                <div className="h-screen">
+                </div>
+                <div className="h-screen">
+                </div>
+            </div>
+            <div
+                style={{
+                    backgroundImage: `url(${tech5})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundBlendMode: 'multiply',
+                }}>
+                <div className="h-screen">
+                </div>
+                <div className="h-screen">
+                </div>
+                <div className="h-screen">
+                </div>
+            </div>
+            <div
+                style={{
+                    backgroundImage: `url(${tech6})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundBlendMode: 'multiply',
+                }}>
+                <div className="h-screen">
+                </div>
+                <div className="h-screen">
+                </div>
+                <div className="h-screen">
+                </div>
+            </div>
         </div>
-        <div className=" flex flex-col justify-center items-center text-white text-center m-10">
-          <h2
-            className="text-7xl md:text-5xl font-bold mb-4 z-10 mb-40"
-            style={{ fontSize: `${scrollPosition}rem` }}
-          >
-            TECHNOLOGY
-          </h2>
-
-        </div>
-        <div className="absolute flex flex-col justify-center items-center text-white overflow-hidden">
-          <Parallax y={[-20, 20]}>
-            <img
-              src={BluePlanet}
-              alt="Blue Planet"
-              className="w-full h-full object-cover"
-              style={{
-                transform: `scale(${scrollPosition * 0.1}) rotate(${scrollPosition * 4}deg)`,
-                opacity: 1 - scrollPosition * 0.5 / 10,
-              }}
-            />
-          </Parallax>
-        </div>
-      </div>
-    </ParallaxProvider>
-  );
+    );
 };
 
 export default Technology;
