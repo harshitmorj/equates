@@ -5,6 +5,7 @@ import tech3 from '../../assets/tech3.png';
 import tech4 from '../../assets/tech4.png';
 import tech5 from '../../assets/tech5.png';
 import tech6 from '../../assets/tech6.png';
+import technology from '../../assets/technology.jpg';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import satellite from '../../assets/satellite.png';
 
@@ -13,8 +14,8 @@ const getRandomValue = (min, max) => {
 };
 
 const Technology = () => {
-    const satellites = [...Array(6)].map((_, index) => {
-        const angle = (index / 6) * 2 * Math.PI; // Equally spaced angles
+    const satellites = [...Array(20)].map((_, index) => {
+        const angle = (index / 20) * 2 * Math.PI; // Equally spaced angles
         const endpointX = 40 * Math.cos(angle); // Calculate x-coordinate
         const endpointY = 47 * Math.sin(angle); // Calculate y-coordinate
         const animationDuration = getRandomValue(8, 12); // Random duration between 8s and 12s
@@ -37,105 +38,62 @@ const Technology = () => {
 
 
     return (
-        <ParallaxProvider>
-            <div className=''
-                style={{
-                    // linear gradient from black to blue
-                    backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
-                }}>
-                <div className="h-screen"
-                    style={{
-                        backgroundImage: `url(${tech1})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    }}
-                >
-                </div>
-                <div className="h-screen"
-                    style={{
-                        backgroundImage: `url(${tech2})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    }}
-                >
-                </div>
-                <div className="h-screen"
-                    style={{
-                        backgroundImage: `url(${tech3})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    }}
-                >
-                    {satellites}
-                </div>
-                <style>
-                {[...Array(6)].map((_, index) => (
+        <div className=''
+            style={{
+                backgroundImage: `url(${technology})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                width: '100vw',
+            }}
+        >
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+                {/* {satellites} */}
+            </div>
+            <style>
+                {[...Array(20)].map((_, index) => (
                     `
                     @keyframes satellitePath${index} {
                         0% {
-                            transform: translate(50*vw, 50*vh);
+                            transform: translate(0, 0);
                         }
                         25% {
-                            transform: translate(${(Math.random()) * 100}vw, ${(Math.random()) * 100}vh);
+                            transform: translate(${(Math.random() - 0.5) * 100}vw, ${(Math.random() - 0.5) * 100}vh);
                         }
                         50% {
-                            transform: translate(${(Math.random() ) * 100}vw, ${(Math.random() ) * 100}vh);
+                            transform: translate(${(Math.random() - 0.5) * 100}vw, ${(Math.random() - 0.5) * 100}vh);
                         }
                         75% {
-                            transform: translate(${(Math.random() ) * 100}vw, ${(Math.random() ) * 100}vh);
+                            transform: translate(${(Math.random() - 0.5) * 100}vw, ${(Math.random() - 0.5) * 100}vh);
                         }
                         100% {
-                            transform: translate(50*vw, 50*vh);
+                            transform: translate(0, 0);
                         }
                     }
                     `
                 ))}
             </style>
-                <div
-                    style={{
-                        backgroundImage: `url(${tech4})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    }}>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                </div>
-                <div
-                    style={{
-                        backgroundImage: `url(${tech5})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    }}>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                </div>
-                <div
-                    style={{
-                        backgroundImage: `url(${tech6})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    }}>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
             </div>
-        </ParallaxProvider>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+            <div className='flex flex-col justify-center items-center h-screen'>
+            </div>
+        </div>
     );
 };
 

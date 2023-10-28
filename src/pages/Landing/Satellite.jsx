@@ -66,6 +66,62 @@ const Satellite = () => {
         x: '90%',
         y: '20%',
       },
+    },
+    {
+      name: 'Satellite 7',
+      info: 'Information for Satellite 7.',
+      position: {
+        x: '56%',
+        y: '65%',
+      },
+    },
+    {
+      name: 'Satellite 8',
+      info: 'Information for Satellite 8.',
+      position: {
+        x: '30%',
+        y: '50%',
+      },
+    },
+    {
+      name: 'Satellite 9',
+      info: 'Information for Satellite 9.',
+      position: {
+        x: '50%',
+        y: '20%',
+      },
+    },
+    {
+      name: 'Satellite 10',
+      info: 'Information for Satellite 10.',
+      position: {
+        x: '80%',
+        y: '37%',
+      },
+    },
+    {
+      name: 'Satellite 11',
+      info: 'Information for Satellite 11.',
+      position: {
+        x: '90%',
+        y: '60%',
+      },
+    },
+    {
+      name: 'Satellite 12',
+      info: 'Information for Satellite 12.',
+      position: {
+        x: '90%',
+        y: '80%',
+      },
+    },
+    {
+      name: 'Satellite 13',
+      info: 'Information for Satellite 13.',
+      position: {
+        x: '20%',
+        y: '20%',
+      },
     }
   ];
 
